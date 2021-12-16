@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Reverse Array</title>
+</head>
+<body>
+<script>
+    let arr = [1,2,3,4,5,6,7];
+
+    document.write('Array before: ');
+    for (let i = 0; i<arr.length; i++){
+        document.write(arr[i]);
+        document.write(' ');
+    }
+    document.write('<br>');
+    console.log(arr);
+
+    let left = 0, right = arr.length-1;
+    for (;left<right;){
+        let temp = arr[left];
+        arr[left] = arr[right];
+        arr[right] = temp;
+
+        left++;
+        right--;
+    }
+
+    document.write('Array after: ');
+    for (let i = 0; i<arr.length; i++){
+        document.write(arr[i]);
+        document.write(' ');
+    }
+    console.log(arr);
+
+</script>
+</body>
+</html>
